@@ -1,0 +1,37 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      READ_UNKNOWN_ENUM_VALUES_AS_NULL: true
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_PROPERTIES: true
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+  messages:
+    basename: i18n/messages
+  # Redis Config
+  cache:
+    type: redis
+  redis:
+    host: redis
+    port: 6379
+http-client:
+  timeout: 60s
+errors:
+  add-fingerprint: true
+  expose-arguments: never
+logging:
+  level:
+    com:
+      zarinpal: debug
+vault-service:
+  base-url: http://vault-service:8200/v1
+  token: s.dZw8AMciwvrgyDVkFUgF44Xx
+tomo-client:
+  base-url: http://testnet.tomo.com:8545
+  facet-private-key: da12abb4a114f38021fb20cd38a2d8609b69a223d833ae15badc3cd6d71d3d06
+  coefficient: 4
+limitation:
+  coefficient: 3
+  max-recharge: 4
