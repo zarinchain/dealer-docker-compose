@@ -1,1 +1,1 @@
-# Docker compose example for init dealer 
+# Docker compose example
